@@ -1,10 +1,10 @@
 class movieStore:
     def __init__(self,storeName, allMovies, availMovies,rentFee,lateFee):
-        self.__storeName = storeName
-        self.__allMovies = allMovies
-        self.__availMovies = availMovies
-        self.__rentFee = rentFee
-        self.__lateFee =lateFee
+        self.__storeName = str(storeName)
+        self.__allMovies = int(allMovies)
+        self.__availMovies = int(availMovies)
+        self.__rentFee = float(rentFee)
+        self.__lateFee = float(lateFee)
 
     def getStoreName(self):
         return self.__storeName
@@ -29,7 +29,7 @@ class movieStore:
             self.__availMovies = self.__availMovies - rentedMovies
             print(f'Your total rent fee is: {self.__rentFee}')
 
-    def calculateLateFee():
+    def calculateLateFee(self):
         returnedMovies = input('How many movies are you returning? ')
         lateMovies = input('How many movies are overdue? ')
         self.__lateFee = lateMovies * self.__lateFee
